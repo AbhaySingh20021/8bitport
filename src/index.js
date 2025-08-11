@@ -1,8 +1,10 @@
 // src/index.js
 import React from "react";
 import ReactDOM from "react-dom/client";
-import SeaAnemoneBackground from './Animation'
+import MyComponent from './Animation'
 import './App.css'
+import { useState, useEffect, useRef } from 'react'
+import DOTS from 'vanta/dist/vanta.dots.min'
 
 import {
   FaReact,
@@ -560,9 +562,21 @@ function Footer() {
 
 /* Main App */
 function App() {
-  return (
+  const [vantaEffect, setVantaEffect] = useState(null)
+  const myRef = useRef(null)
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(DOTS({
+        el: myRef.current
+      }))
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy()
+    }
+  }, [vantaEffect])
+  return <div ref={myRef}>
     <div className="app" role="main">
-      <SeaAnemoneBackground />
+      <MyComponent />
       <Header />
       <HeroSection />
       <SkillsSection />
@@ -572,7 +586,7 @@ function App() {
       
       <Footer />
     </div>
-  );
+  </div>
 }
 
 /* Mount to DOM */
