@@ -2,6 +2,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import SeaAnemoneBackground from './Animation'
+import './App.css'
 
 import {
   FaReact,
