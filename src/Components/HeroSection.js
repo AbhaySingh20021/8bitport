@@ -25,6 +25,9 @@ import {
 
   import profilePic from "../Images/Profile.png";
   import { useState, useEffect } from "react";
+  import ScrollAnimationWrapper from "./useScrollAnimations";
+
+
   
  
 
@@ -63,8 +66,12 @@ import {
 
 
 export default function HeroSection() {
+   
+
     return (
-      <section className="section" id="about" role="region" aria-label="Hero">
+
+       
+        <section className="section" id="about" role="region" aria-label="Hero">
         <div className="pixel-bg" />
         <div className="hero-box fade-up">
           <div>
@@ -125,6 +132,10 @@ export default function HeroSection() {
           </aside>
         </div>
       </section>
+        
+       
+
+      
     );
   }
   

@@ -2,15 +2,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import MyComponent from './Animation'
+import HeroSection from "./Components/HeroSection"; 
+import Header from './Components/Header'
+import ProjectsSection from './Components/Projects'
 import './App.css'
 import { useState, useEffect, useRef } from 'react'
 import DOTS from 'vanta/dist/vanta.dots.min'
 import SkillsSection from "./Components/Skill";
-import Header from "./Components/Header"; 
-import HeroSection from "./Components/HeroSection"; 
-import ProjectsSection from "./Components/Projects";
-
-
 import {
   FaReact,
   FaNodeJs,
@@ -209,21 +207,21 @@ function Footer() {
 
 /* Main App */
 function App() {
-  const [vantaEffect, setVantaEffect] = useState(null)
-  const myRef = useRef(null)
-  useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(DOTS({
-        el: myRef.current
-      }))
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy()
-    }
-  }, [vantaEffect])
-  return <div ref={myRef}>
+  // const [vantaEffect, setVantaEffect] = useState(null)
+  // const myRef = useRef(null)
+  // useEffect(() => {
+  //   if (!vantaEffect) {
+  //     setVantaEffect(DOTS({
+  //       el: myRef.current
+  //     }))
+  //   }
+  //   return () => {
+  //     if (vantaEffect) vantaEffect.destroy()
+  //   }
+  // }, [vantaEffect])
+  return <div >
     <div className="app" role="main">
-      <MyComponent />
+      {/* <MyComponent /> */}
       <Header />
       <HeroSection />
       <SkillsSection/>

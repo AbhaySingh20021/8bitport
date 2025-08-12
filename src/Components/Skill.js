@@ -52,7 +52,7 @@ export default function SkillsSection() {
           <div className="left-card">
             <div className="section-heading">
               <div className="dot" />
-              <div style={{ fontSize: 14 }}>Expertise</div>
+              <div>Expertise</div>
             </div>
   
             <p className="small">A mix of modern front-end tooling and backend primitives. Comfortable shipping production apps.</p>

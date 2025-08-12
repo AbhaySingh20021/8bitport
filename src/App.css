@@ -95,8 +95,8 @@ body{
 
 
 .pixel {
-  font-family: "Press Start 2P", monospace;
-  letter-spacing: 0.5px;
+  font-family: "Bebas Neue";
+  letter-spacing: 1.2px;
 }
 
 
@@ -176,7 +176,7 @@ body{
 
 
 .hero-title {
-  font-size: clamp(22px, 4.6vw, 44px);
+  font-size: 4.5rem;;
   margin:0 0 10px 0;
   line-height:1.02;
 }
@@ -218,8 +218,8 @@ body{
 
 
 .section-heading {
-  font-family:"Press Start 2P", monospace;
-  font-size:18px;color:#111;margin-bottom:10px;
+  font-family:"Bebas Neue", monospace;
+  font-size:2rem;color:#111;margin-bottom:10px;
   display:flex;align-items:center;gap:12px;
 }
 .section-heading .dot {
@@ -381,136 +381,17 @@ body{
 }
 
 
-@media (prefers-reduced-motion: reduce) {
-  .skill-card,
-  .skill-card .skill-icon,
-  .skill-card .progress-indicator > div {
-    animation: none !important;
-    transition: none !important;
-    transform: none !important;
-  }
-}
 
 
 
 
 
-.skills-section {
- 
-  animation: fadeSlideUp 1s ease-in-out forwards;
-  background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
-  background-size: 400% 400%;
-  animation: fadeSlideUp 1s ease-in-out forwards, gradientShift 15s ease infinite;
-}
 
 
-.skill-card {
- 
-  opacity: 0;
-  transform: translateY(30px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: cardFadeIn 0.8s ease forwards;
-  animation-timeline: view();
-  animation-range: entry 0% cover 30%;
-}
-.skill-card:hover {
-  transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-
-.skill-icon {
- 
-  display: inline-block;
-  transition: transform 0.6s ease;
-}
-.skill-card:hover .skill-icon {
-  transform: rotate(360deg);
-}
-
-
-.skill-title {
- 
-  animation: glowPulse 2.5s infinite alternate;
-}
-
-
-@keyframes fadeSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes cardFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px) scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes glowPulse {
-  0% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4),
-                 0 0 10px rgba(255, 215, 0, 0.6);
-  }
-  100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7),
-                 0 0 25px rgba(255, 215, 0, 0.9);
-  }
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.project-card {
-  perspective: 1000px;
-}
-.card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.8s ease;
-}
-.card-inner.flipped {
-  transform: rotateY(180deg);
-}
-.card-front,
-.card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-.card-front {
-  background: var(--card-front-bg, white);
-}
-.card-back {
-  background: var(--card-back-bg, #f5f5f5);
-  transform: rotateY(180deg);
-}
 .avatar {
-  width: 350px; 
-  height: 450px; 
-  border-radius: 50%;
+  width: 200px; 
+  height: 250px; 
+  
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -518,9 +399,10 @@ body{
 }
 
 .avatar-img {
+  
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  
   opacity: 0;
   transform: scale(0.9);
   animation: avatarFadeZoom 2s ease forwards;
@@ -546,13 +428,14 @@ body{
   justify-content: left;                
 }
 .classDiv{
-  width: 350px; 
-  height: 450px; 
-  border-radius: 50%;
+  width: 250px; 
+  height: 250px; 
+  border-radius: 90%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 0;
 
 }
 
@@ -561,6 +444,6 @@ body{
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transform: scale(0.9);
+  transform: scale(1);
   animation: avatarFadeZoom 2s ease forwards;
 }
