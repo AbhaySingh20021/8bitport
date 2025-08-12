@@ -22,9 +22,44 @@ import {
     SiExpress,
     SiNextdotjs,
   } from "react-icons/si";
+
+  import profilePic from "../Images/Profile.png";
+  import { useState, useEffect } from "react";
+  
+ 
+
+
+
+  function TypingHeading({ text = "", speed = 100 }) {
+    const [displayedText, setDisplayedText] = useState("");
+  
+    useEffect(() => {
+      if (typeof text !== "string" || text.length === 0) {
+        setDisplayedText("");
+        return;
+      }
+  
+      let index = 0;
+      setDisplayedText(""); // reset before typing
+      const interval = setInterval(() => {
+        if (index < text.length) {
+          setDisplayedText((prev) => prev + text[index]);
+          index++;
+        } else {
+          clearInterval(interval);
+        }
+      }, speed);
+  
+      return () => clearInterval(interval);
+    }, [text, speed]);
+  
+    return <h1 className="section-heading subheading">{displayedText}</h1>;
+  }
   
   
-  
+
+
+
 
 
 export default function HeroSection() {
@@ -37,10 +72,11 @@ export default function HeroSection() {
               <div className="pixel-tag">Full-Stack</div>
               <div className="pixel-tag">Web Design</div>
             </div>
+            
   
             <h2 className="hero-title pixel">Hi — I’m <span style={{ background: "linear-gradient(90deg,#06b6d4,#f472b6)", WebkitBackgroundClip: "text", color: "transparent" }}>Abhay Singh</span></h2>
   
-            <p className="hero-sub">I build beautiful front-end experiences, modern web apps, and secure feature integrations. I focus on performance, accessibility and polished UI.</p>
+            <p className="hero-sub subheading ">I build beautiful front-end experiences, modern web apps, and secure feature integrations. I focus on performance, accessibility and polished UI.</p>
   
             <div className="cta-row">
               <a className="cta-btn" href="#projects">View Projects</a>
@@ -61,21 +97,24 @@ export default function HeroSection() {
           </div>
   
           <aside className="profile-card">
-            <div className="avatar">AS</div>
+          
+
+            <div className="avatar">
+                    <img src={profilePic} alt="Abhay Singh" className="avatar-img" />
+            </div>
             <div style={{ textAlign: "center" }}>
-              <div style={{ fontWeight: 800, fontSize: 18 }}>Abhay Singh</div>
               <div style={{ color: "var(--muted)", fontSize: 13 }}>Full-Stack Developer</div>
             </div>
   
             <div style={{ display: "flex", gap: 10, marginTop: 8 }}>
-              <a className="pixel-tag" href="#"><FaGithub /></a>
-              <a className="pixel-tag" href="#"><FaLinkedin /></a>
-              <a className="pixel-tag" href="#"><FaEnvelope /></a>
+              <a className="pixel-tag" href="https://github.com/AbhaySingh20021"><FaGithub /></a>
+              <a className="pixel-tag" href="https://www.linkedin.com/in/abhay-singh-77688b1bb/"><FaLinkedin /></a>
+              <a className="pixel-tag" href="mailto:abhaysengar3250@gmail.com"><FaEnvelope /></a>
             </div>
   
             <div style={{ marginTop: 12, display: "flex", gap: 12 }}>
               <div style={{ textAlign: "center" }}>
-                <div style={{ fontWeight: 800 }}>6+</div>
+                <div style={{ fontWeight: 800 }}>12+</div>
                 <div style={{ fontSize: 12, color: "var(--muted)" }}>Projects</div>
               </div>
               <div style={{ textAlign: "center" }}>

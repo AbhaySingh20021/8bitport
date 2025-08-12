@@ -22,13 +22,14 @@ import {
     SiExpress,
     SiNextdotjs,
   } from "react-icons/si";
+  import ProjectSS from '../Images/Project.png'
   
   
   
 
   const PROJECTS1 = [
     {
-      title: "Cloud Voting System",
+      title: "Blockchain Voting System",
       subtitle: "Blockchain · dApp",
       description:
         "A secure, tamper-proof online voting platform leveraging blockchain to ensure transparency, immutability, and accessibility for large-scale elections. Implemented multi-factor authentication and end-to-end encryption for voter privacy.",
@@ -148,7 +149,6 @@ import {
   
               <div style={{ display: "flex", gap: 8, marginTop: 6 }}>
                 <div className="pixel-tag">dApp</div>
-                <div className="pixel-tag">Marketplace</div>
                 <div className="pixel-tag">Scraper</div>
               </div>
             </div>
@@ -224,10 +224,14 @@ import {
                     fontWeight: 800,
                   }}
                 >
-                  Screenshot
+                <div className="">
+                <img className="projectimg" src={ProjectSS} alt="Voting System" ></img>
+
+                </div>
+                  
                 </div>
                 <div style={{ fontSize: 13, color: "var(--muted)" }}>
-                  Role: {PROJECTS1[0].role} · Tech: {PROJECTS1[0].tech}
+                Tech: {PROJECTS1[0].tech}
                 </div>
               </div>
             </div>
