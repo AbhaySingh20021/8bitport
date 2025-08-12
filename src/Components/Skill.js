@@ -1,43 +1,50 @@
+// Imports
+import { FaReact, FaNodeJs, FaJsSquare, FaJava, FaDocker, FaLaptopCode } from "react-icons/fa";
+import { 
+  SiSolidity, 
+  SiMongodb, 
+  SiTailwindcss, 
+  SiRedux, 
+  SiMysql, 
+  SiExpress, 
+  SiNextdotjs, 
+  SiGraphql, 
+  SiTypescript, 
+  SiPostgresql, 
+  SiDatabricks,  
+  SiGithubactions, 
+  SiFirebase 
+} from "react-icons/si";
 
-import {
-    FaReact,
-    FaNodeJs,
-    FaHtml5,
-    FaCss3Alt,
-    FaJsSquare,
-    FaGithub,
-    FaLinkedin,
-    FaEnvelope,
-    FaLaptopCode,
-    FaUserGraduate,
-    FaCalendarAlt,
-    FaMapMarkerAlt,
-    FaCheckCircle,
-  } from "react-icons/fa";
-  import {
-    SiMongodb,
-    SiSolidity,
-    SiTailwindcss,
-    SiMysql,
-    SiRedux,
-    SiExpress,
-    SiNextdotjs,
-  } from "react-icons/si";
+// Skills Array
+const SKILLS = [
+  { name: "React.js", icon: <FaReact size={28} color="#61dafb" /> },
+  { name: "Node.js", icon: <FaNodeJs size={28} color="#8cc84b" /> },
+  { name: "MongoDB", icon: <SiMongodb size={28} color="#4db33d" /> },
+  { name: "Tailwind CSS", icon: <SiTailwindcss size={28} color="#38bdf8" /> },
+  { name: "Redux", icon: <SiRedux size={28} color="#764abc" /> },
+  { name: "MySQL", icon: <SiMysql size={28} color="#00758f" /> },
+  { name: "Express.js", icon: <SiExpress size={28} color="#000" /> },
+  { name: "Next.js", icon: <SiNextdotjs size={28} color="#111" /> },
+  { name: "JavaScript", icon: <FaJsSquare size={28} color="#f7df1e" /> },
+
+  // Added specific technical skills
+  { name: "REST API Development", icon: <FaLaptopCode size={28} color="#0db7ed" /> },
+  { name: "GraphQL", icon: <SiGraphql size={28} color="#e535ab" /> },
+  { name: "TypeScript", icon: <SiTypescript size={28} color="#3178c6" /> },
+  { name: "PostgreSQL", icon: <SiPostgresql size={28} color="#336791" /> },
+  { name: "Database Management", icon: <SiDatabricks size={28} color="#ff6f00" /> },
+  { name: "Java", icon: <FaJava size={28} color="#007396" /> },
+  { name: "Docker", icon: <FaDocker size={28} color="#2496ed" /> },
+  { name: "CI/CD Pipelines", icon: <SiGithubactions size={28} color="#2088ff" /> },
+  { name: "Firebase", icon: <SiFirebase size={28} color="#ffca28" /> }
+];
+
 
 
 export default function SkillsSection() {
-    const SKILLS = [
-        { name: "React.js", icon: <FaReact size={28} color="#61dafb" /> },
-        { name: "Node.js", icon: <FaNodeJs size={28} color="#8cc84b" /> },
-        { name: "Solidity", icon: <SiSolidity size={28} color="#333" /> },
-        { name: "MongoDB", icon: <SiMongodb size={28} color="#4db33d" /> },
-        { name: "Tailwind CSS", icon: <SiTailwindcss size={28} color="#38bdf8" /> },
-        { name: "Redux", icon: <SiRedux size={28} color="#764abc" /> },
-        { name: "MySQL", icon: <SiMysql size={28} color="#00758f" /> },
-        { name: "Express.js", icon: <SiExpress size={28} color="#000" /> },
-        { name: "Next.js", icon: <SiNextdotjs size={28} color="#111" /> },
-        { name: "JavaScript", icon: <FaJsSquare size={28} color="#f7df1e" /> },
-      ];
+    
+      
   
     return (
       <section className="section" id="skills" role="region" aria-label="Skills">

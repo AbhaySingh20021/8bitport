@@ -35,7 +35,7 @@ import {
       tags: ["Solidity", "React", "Node.js", "Web3.js", "IPFS"],
       role: "Full-stack developer",
       tech: "Solidity, React, Node.js, Web3.js, IPFS, TailwindCSS",
-      liveDemo: "#",
+      liveDemo: "https://github.com/AbhaySingh20021/Vote_Block_main",
       source: "https://github.com/AbhaySingh20021/Vote_Block_main",
       timeline: "Jan 2024 – Mar 2024",
       highlights: [
