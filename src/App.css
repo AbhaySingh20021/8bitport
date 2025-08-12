@@ -425,7 +425,8 @@ body{
   margin-bottom: 1.5rem;               
   opacity: 0.85;                       
   line-height: 1.4;                    
-  justify-content: left;                
+  justify-content: left;   
+  font-family: Bebas Neue;             
 }
 .classDiv{
   width: 250px; 
