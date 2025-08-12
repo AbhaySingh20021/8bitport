@@ -39,8 +39,8 @@
 
 
 
-/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Press+Start+2P&display=swap');
+
 
 :root{
   --bg-1: #ffffff;
@@ -52,7 +52,7 @@
   --card-border: #111;
 }
 
-/* Reset */
+
 *{box-sizing:border-box}
 html,body,#root{height:100%;margin:0}
 body{
@@ -64,7 +64,7 @@ body{
   overflow-y: auto;
 }
 
-/* App container uses vertical scroll-snap */
+
 .app {
   scroll-snap-type: y mandatory;
   height: 100vh;
@@ -72,7 +72,7 @@ body{
   scroll-behavior: smooth;
 }
 
-/* Each section fills viewport */
+
 .section {
   scroll-snap-align: start;
   min-height: 100vh;
@@ -83,7 +83,7 @@ body{
   position: relative;
 }
 
-/* Page layout wrapper */
+
 .container {
   width: min(1180px, 94%);
   margin: 0 auto;
@@ -93,13 +93,13 @@ body{
   align-items: start;
 }
 
-/* Pixel headline font */
+
 .pixel {
   font-family: "Press Start 2P", monospace;
   letter-spacing: 0.5px;
 }
 
-/* Header / Nav */
+
 .header {
   position: fixed;
   top: 12px;
@@ -126,14 +126,14 @@ body{
   box-shadow: 0 6px 18px rgba(6,182,212,0.12);
 }
 
-/* Nav links */
+
 .header nav a {
   text-decoration:none;color:var(--dark);font-weight:600;font-size:13px;
   padding:6px 8px;border-radius:6px;
 }
 .header nav a:hover { background:#eef2ff; }
 
-/* Left column card style */
+
 .left-card {
   background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(250,250,250,0.95));
   border: 3px solid var(--card-border);
@@ -143,17 +143,17 @@ body{
   position: relative;
 }
 
-/* Right column content card style */
+
 .right-card {
   background: linear-gradient(180deg,#ffffff,#fcfeff);
   border-radius: 16px;
   padding: 22px;
-  border: 2px dotted #111; /* dotted pixel-like */
+  border: 2px dotted #111;
   
   min-height: 420px;
 }
 
-/* Hero / intro */
+
 .hero-root {
   margin-left: auto;
   margin-right: auto;
@@ -165,7 +165,7 @@ body{
 
 }
 
-/* Big hero box */
+
 .hero-box {
   width: min(1100px, 94%);
   display: grid;
@@ -174,7 +174,7 @@ body{
   align-items:center;
 }
 
-/* Hero left */
+
 .hero-title {
   font-size: clamp(22px, 4.6vw, 44px);
   margin:0 0 10px 0;
@@ -184,7 +184,7 @@ body{
   font-size:15px;color:var(--muted);max-width:54ch;margin-bottom:20px;
 }
 
-/* CTA row */
+
 .cta-row{display:flex;gap:12px;align-items:center;}
 .cta-btn {
   background: linear-gradient(90deg,var(--accent-1),var(--accent-2));
@@ -198,12 +198,12 @@ body{
   text-decoration: none;
 }
 
-/* small pixel tags */
+
 .pixel-tag{
   display:inline-block;padding:8px 10px;border-radius:8px;background:#fff;border:2px dotted #111;margin-right:8px;font-size:11px;
 }
 
-/* Right hero card */
+
 .profile-card {
   display:flex;flex-direction:column;align-items:center;gap:14px;padding:16px;
   border-radius:12px;
@@ -216,7 +216,7 @@ body{
   font-size:13px;color:var(--muted);
 }
 
-/* Section heading big */
+
 .section-heading {
   font-family:"Press Start 2P", monospace;
   font-size:18px;color:#111;margin-bottom:10px;
@@ -227,7 +227,7 @@ body{
   box-shadow: 0 4px 10px rgba(6,182,212,0.12);
 }
 
-/* Grid utilities */
+
 .grid-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .project-card {
@@ -241,26 +241,26 @@ body{
 .project-title{font-weight:700;font-size:16px}
 .tech-pill{display:inline-block;padding:6px 8px;border-radius:8px;background:#111;color:white;font-size:11px;margin-right:8px}
 
-/* skills block */
+
 .skill-card{padding:14px;border-radius:12px;background:#fff;border:2px solid #111;display:flex;gap:12px;align-items:center}
 .skill-icon{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#f0f7ff,#fff0f7);display:flex;align-items:center;justify-content:center;border:2px dotted #111}
 
-/* timeline */
+
 .timeline{display:flex;flex-direction:column;gap:18px}
 .timeline-item{display:flex;gap:12px;align-items:flex-start}
 .timeline-dot{width:14px;height:14px;border-radius:4px;background:var(--accent-2);border:3px solid #111;margin-top:6px}
 
-/* contact */
+
 .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:start}
 .contact-card{padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff,#fafafa);border:3px dotted #111}
 .form-row{display:flex;gap:8px;margin-bottom:12px}
 .form-input{flex:1;padding:12px;border-radius:8px;border:2px solid #111;background:transparent}
 .form-area{min-height:140px;padding:12px;border-radius:8px;border:2px solid #111;background:transparent;resize:vertical}
 
-/* footer */
+
 .footer{padding:28px;text-align:center;color:var(--muted);font-size:13px}
 
-/* small responsive */
+
 @media (max-width: 980px){
   .container{grid-template-columns:1fr; padding-bottom:60px}
   .hero-box{grid-template-columns:1fr}
@@ -269,14 +269,241 @@ body{
   .contact-grid{grid-template-columns:1fr}
 }
 
-/* subtle animations */
+
 .fade-up { animation: fadeUp .8s cubic-bezier(.2,.9,.2,1) both;}
 @keyframes fadeUp{ from { transform: translateY(12px); opacity:0 } to { transform: translateY(0); opacity:1 } }
 
-/* pixel dotted background accents */
+
 .pixel-bg {
   background-image: radial-gradient(#111 1px, transparent 1px);
   background-size: 6px 6px;
   opacity: 0.03;
   position: absolute;inset:0;z-index:0;
+}
+
+
+
+
+
+@keyframes skillPop {
+  from { opacity: 0; transform: translateY(18px) scale(0.985); }
+  60%  { opacity: 1; transform: translateY(-6px) scale(1.02); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+
+@keyframes floatIcon {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+
+@keyframes shinePulse {
+  0% { box-shadow: 0 8px 24px rgba(11,20,40,0.04); }
+  50% { box-shadow: 0 18px 36px rgba(6,182,212,0.08); }
+  100% { box-shadow: 0 8px 24px rgba(11,20,40,0.04); }
+}
+
+
+.skill-card {
+  opacity: 0;
+  transform-origin: center;
+  will-change: transform, opacity, box-shadow;
+ 
+  animation-name: skillPop;
+  animation-duration: 700ms;
+  animation-timing-function: cubic-bezier(.2,.9,.2,1);
+  animation-fill-mode: both;
+ 
+  transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms ease, background-color 180ms ease;
+}
+
+
+.grid-3 .skill-card:nth-child(1)  { animation-delay: 0.06s; }
+.grid-3 .skill-card:nth-child(2)  { animation-delay: 0.12s; }
+.grid-3 .skill-card:nth-child(3)  { animation-delay: 0.18s; }
+.grid-3 .skill-card:nth-child(4)  { animation-delay: 0.24s; }
+.grid-3 .skill-card:nth-child(5)  { animation-delay: 0.30s; }
+.grid-3 .skill-card:nth-child(6)  { animation-delay: 0.36s; }
+.grid-3 .skill-card:nth-child(7)  { animation-delay: 0.42s; }
+.grid-3 .skill-card:nth-child(8)  { animation-delay: 0.48s; }
+.grid-3 .skill-card:nth-child(9)  { animation-delay: 0.54s; }
+.grid-3 .skill-card:nth-child(10) { animation-delay: 0.60s; }
+
+
+.skill-card:hover,
+.skill-card:focus {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 22px 48px rgba(11,20,40,0.12);
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,250,0.98));
+  outline: none;
+}
+
+
+.skill-card .skill-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  animation: floatIcon 3.4s ease-in-out infinite;
+  transition: transform 220ms ease;
+  will-change: transform;
+}
+
+
+.skill-card:hover .skill-icon,
+.skill-card:focus .skill-icon {
+  transform: translateY(-8px) rotate(-6deg) scale(1.04);
+}
+
+
+.skill-card .progress-indicator {
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #eef2ff; 
+}
+.skill-card .progress-indicator > div {
+  height: 100%;
+  transform-origin: left center;
+  transform: scaleX(0);
+  animation: growBar 900ms cubic-bezier(.2,.9,.2,1) forwards;
+  animation-delay: 0.4s;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+}
+@keyframes growBar {
+  to { transform: scaleX(1); }
+}
+
+
+.skill-card:focus {
+  box-shadow: 0 10px 28px rgba(6,182,212,0.10), 0 0 0 4px rgba(6,182,212,0.06);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-card,
+  .skill-card .skill-icon,
+  .skill-card .progress-indicator > div {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+
+
+
+
+.skills-section {
+ 
+  animation: fadeSlideUp 1s ease-in-out forwards;
+  background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  background-size: 400% 400%;
+  animation: fadeSlideUp 1s ease-in-out forwards, gradientShift 15s ease infinite;
+}
+
+
+.skill-card {
+ 
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: cardFadeIn 0.8s ease forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+.skill-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.skill-icon {
+ 
+  display: inline-block;
+  transition: transform 0.6s ease;
+}
+.skill-card:hover .skill-icon {
+  transform: rotate(360deg);
+}
+
+
+.skill-title {
+ 
+  animation: glowPulse 2.5s infinite alternate;
+}
+
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4),
+                 0 0 10px rgba(255, 215, 0, 0.6);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7),
+                 0 0 25px rgba(255, 215, 0, 0.9);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.project-card {
+  perspective: 1000px;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+.card-inner.flipped {
+  transform: rotateY(180deg);
+}
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.card-front {
+  background: var(--card-front-bg, white);
+}
+.card-back {
+  background: var(--card-back-bg, #f5f5f5);
+  transform: rotateY(180deg);
 }
